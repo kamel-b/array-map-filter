@@ -24,7 +24,9 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+  return names.filter((house)=>{
+    return house.endsWith("Stark")
+  })
 }
-
 // Ne pas modifier l'export
 module.exports = keepStarks;

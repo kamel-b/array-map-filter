@@ -19,7 +19,7 @@ Exemple d'entrée:
     'Mad Max: Fury Road',
     'Interstellar',
     'Revenge of the Nerds',
-    'Revenge of the Pink Panther',
+    'Revenge of the Pink Pant    her',
     'Star Wars: Episode I - The Phantom Menace',
     'Star Wars: Episode II - Attack of the Clones',
     'Star Wars: Episode III - Revenge of the Sith'
@@ -38,8 +38,13 @@ Exemple d'entrée:
 
  */
 
-function searchWordFilter(items, search) {
+const searchWordFilter = (items, search) => {
+  return items.filter((item)=>{
+    return item.toLowerCase().includes(search.toLowerCase())
+  })
+  
 }
+
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

@@ -12,7 +12,7 @@ Comme on n'a pas besoin d'une très grande précision en sortie,
 il t'est demandé de ramener chaque valeur calculée à trois chiffres
 après la virgule, en utilisant la méthode toFixed des nombres (Google est ton ami).
 
-La fonction devra retourner, pour chaque rayon du tableau d'entrée, un objet ayant cette "forme":
+La fonction devra retourner, pour chaque 1rayon du tableau d'entrée, un objet ayant cette "forme":
 {
   radius: R,
   circumference: C
@@ -51,7 +51,19 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 ]
 */
 
-function getCirclesProperties(radiuses) {
+const getCirclesProperties = (radiuses) =>{
+  return radiuses.map((radius)=>{
+    radius = {
+      circumference : 2 * Math.PI * radius,
+      radius : radius,
+      surface : Math.PI * radius * radius
+      
+    }
+    radius.circumference = radius.circumference.toFixed(3)
+    radius.radius = radius.radius
+    radius.surface = radius.surface.toFixed(3)
+    return radius 
+  })
 }
 
 

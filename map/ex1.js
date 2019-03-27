@@ -4,7 +4,41 @@ Ecrire une fonction getStringsLength qui reçoit comme un argument un tableau de
 En utilisant map, cette fonction doit renvoyer un tableau avec,
 pour chaque chaîne CHAINE de longueur N en entrée, la chaîne "CHAINE contains N characters"
 en sortie.
-
+[[
+    {
+      name: 'Crazy Rich Asians',
+      rating: 93
+    },
+    {
+      name: 'Skyscraper',
+      rating: 46
+    },
+    {
+      name: 'Leave No Trace',
+      rating: 100
+    },
+    {
+      name: 'White Boy Rick',
+      rating: 60
+    }
+  ]
+    {
+      name: 'Crazy Rich Asians',
+      rating: 93
+    },
+    {
+      name: 'Skyscraper',
+      rating: 46
+    },
+    {
+      name: 'Leave No Trace',
+      rating: 100
+    },
+    {
+      name: 'White Boy Rick',
+      rating: 60
+    }
+  ]
 Exemple d'entrée:
   [
     'Chicken',
@@ -22,6 +56,9 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
+  return strings.map(function(food){
+    return food +' contains ' + food.length +' characters';
+  })
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
